@@ -20,7 +20,6 @@ public class FirstServlet extends HttpServlet {
             String contents = reader.lines()
                     .collect(Collectors.joining(System.lineSeparator()));
             request.setAttribute("fileData", contents);
-
         }
         request.setAttribute("button", but.toUpperCase());
         request.getRequestDispatcher("/pages/result.jsp").forward(request, response);
